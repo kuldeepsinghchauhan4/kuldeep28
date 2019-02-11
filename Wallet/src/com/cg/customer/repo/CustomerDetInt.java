@@ -1,9 +1,11 @@
 package com.cg.customer.repo;
 
 import com.cg.customer.bean.Customer;
+import com.cg.customer.exception.NumberNotfoundException;
 
 public interface CustomerDetInt {
-	boolean save( );
-	Customer findByPhone(String mobno);
+	
+	Customer findByPhone(String mobno) throws NumberNotfoundException;
+	boolean save(Customer c);
 
 }
